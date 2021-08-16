@@ -1,0 +1,26 @@
+
+@model demomvc.Models.Formulario
+
+@{
+    ViewData["Title"] = "Formulario de registro";
+}
+    <h1>@ViewData["Title"]</h1>
+<div class="text-center">
+    <h1 class="display-4">Formulario de registro producto</h1>
+    <form asp-controller="Formulario" asp-action="calcularTotal">
+        <label asp-for="nombre" class="form-label"></label>
+        <input asp-for="nombre" class="form-control form-control-sm" type="text" placeholder="Nombre del Producto" aria-label=".form-control-sm"  required/>
+
+        <label asp-for="precio" class="control-label"></label>
+        <input asp-for="precio" class="form-control form-control-sm"  type='text' placeholder="Colocar Precio" aria-label=".form-control-sm" required/>
+        <label asp-for="cantidad" class="control-label"></label>
+        <input asp-for="cantidad" class="form-control form-control-sm" placeholder="Colocar Cantidad de Productos" aria-label=".form-control-sm" required/>
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Vender</button> 
+        </div>
+    </form>
+        <h3>@ViewData["Producto"]</h3>
+        <h3>@ViewData["Message"]</h3>
+        <h3>@ViewData["total"]</h3>
+</div>  
